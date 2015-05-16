@@ -1,0 +1,17 @@
+{
+  "name": "jquery",
+  "version": "1.4.4",
+  "main": "./jquery.js",
+  "dependencies": {},
+  "homepage": "https://github.com/jquery/jquery",
+  "_release": "1.4.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.4",
+    "commit": "9b20df0375f37cc0997bd8ed3d1892a23967d3d5"
+  },
+  "_source": "git://github.com/jquery/jquery.git",
+  "_target": "1.4.4",
+  "_originalSource": "jquery",
+  "_direct": true
+}

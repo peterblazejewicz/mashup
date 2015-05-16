@@ -1,0 +1,21 @@
+{
+  "name": "mashup",
+  "version": "0.0.0",
+  "homepage": "https://github.com/peterblazejewicz/mashup",
+  "authors": [
+    "Peter Blazejewicz <peter.blazejewicz@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.4.4",
+    "bootstrap": "~3.3.4",
+    "bootbox": "~4.4.0"
+  }
+}
