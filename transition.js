@@ -14,6 +14,7 @@
   // ============================================================
 
   function transitionEnd() {
+    // no - we do not support transitions
     return false;
   }
 
@@ -23,6 +24,7 @@
   }
 
   $(function () {
+    // explicit false
     $.support.transition = false;
   })
 
