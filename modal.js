@@ -70,7 +70,8 @@
 
     this.$dialog.bind('mousedown.dismiss.bs.modal', function () {
       that.$element.one('mouseup.dismiss.bs.modal', function (e) {
-        if ($(e.target).is(that.$element)) that.ignoreBackdropClick = true
+        // 1.4.4 does not support objectified .is - so use different comparison
+        if (e.target === that.$element.get(0)) that.ignoreBackdropClick = true
       })
     })
 
