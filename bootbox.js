@@ -708,13 +708,13 @@
      * interaction with our dialog
      */
 
-    dialog.bind("click", ".modal-footer button", function(e) {
+    $(".modal-footer button", dialog).bind("click", function(e) {
       var callbackKey = $(this).data("bb-handler");
 
       processCallback(e, dialog, callbacks[callbackKey]);
     });
 
-    dialog.bind("click", ".bootbox-close-button", function(e) {
+    $(".bootbox-close-button", dialog).bind("click", function(e) {
       // onEscape might be falsy but that's fine; the fact is
       // if the user has managed to click the close button we
       // have to close the dialog, callback or not
