@@ -15,10 +15,18 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world!</p>
+        <p>
+          <button class="btn btn-primary">Show Hello World prompt!</button>
+        </p>
 
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="dist/js/mashup.min.js"></script>
-
+        <script>
+          $(function() {
+            $('.btn', document).bind('click', function(event) {
+              bootbox.alert('Hello World!');
+            });
+          });
+        </script>
     </body>
 </html>
