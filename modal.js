@@ -65,7 +65,8 @@
     this.escape()
     this.resize()
 
-    this.$element.bind('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+    // no namespaced events in 1.4.4
+    $('[data-dismiss="modal"]', this.$element).bind('click.dismiss.bs.modal', $.proxy(this.hide, this))
 
     this.$dialog.bind('mousedown.dismiss.bs.modal', function () {
       that.$element.one('mouseup.dismiss.bs.modal', function (e) {
