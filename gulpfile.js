@@ -5,7 +5,9 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   minifyCss = require('gulp-minify-css'),
   notify = require('gulp-notify'),
-  util = require('gulp-util');
+  util = require('gulp-util'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify');
   
 gulp.task('less', function() {
   return gulp.src(['assets/styles/mashup-theme.less'])
@@ -17,4 +19,11 @@ gulp.task('less', function() {
 //    .pipe(minifyCss({keepBreaks: false}))
     .pipe(gulp.dest('dist/css'))
     .pipe(notify('Less compiled'));
+});
+
+gulp.task('compress', function() {
+  return gulp.src(['assets/js/transition.js', 'assets/js/modal.js', 'assets/js/bootbox.js'])
+    .pipe(concat('mashup.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
 });
