@@ -8,7 +8,7 @@ var gulp = require('gulp'),
   notify = require('gulp-notify'),
   uglify = require('gulp-uglify'),
   util = require('gulp-util');
-  
+
 gulp.task('less', function() {
   return gulp.src(['assets/styles/mashup-theme.less'])
     .pipe(less({
