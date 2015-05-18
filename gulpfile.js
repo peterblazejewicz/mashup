@@ -16,7 +16,7 @@ gulp.task('less', function() {
     }))
     .on('error', util.log)
     .pipe(autoprefixer('ie9'))
-//    .pipe(minifyCss({keepBreaks: false}))
+    .pipe(minifyCss({keepBreaks: false}))
     .pipe(gulp.dest('dist/css'))
     .pipe(notify('Less compiled'));
 });
