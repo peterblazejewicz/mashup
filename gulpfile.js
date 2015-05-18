@@ -1,13 +1,13 @@
 'use strict';
 /*global require */
 var gulp = require('gulp'),
-  less = require('gulp-less'),
   autoprefixer = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
+  less = require('gulp-less'),
   minifyCss = require('gulp-minify-css'),
   notify = require('gulp-notify'),
-  util = require('gulp-util'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify');
+  uglify = require('gulp-uglify'),
+  util = require('gulp-util');
   
 gulp.task('less', function() {
   return gulp.src(['assets/styles/mashup-theme.less'])
